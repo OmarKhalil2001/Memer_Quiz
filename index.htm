@@ -1,0 +1,371 @@
+<!doctype html>
+<html>
+    <Head>
+        <meta name="verifyownership" content="227bbb31615c092760a93e76ad8a99da">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+        <title>Memer Qiuz</title>
+        <style>
+            html{ min-height: 100%}
+            body{
+                height: 100%;
+                margin: 0;
+                background: linear-gradient(to top left, #0CB373, #2B8242);
+            }
+            @font-face{	
+                font-family: ourFont;
+                src: url("ABeeZee-Regular.ttf");	
+            }
+            #check{
+                display: none;
+                position: fixed;
+                left: 14%;
+                padding: 1%;
+                width: 70%;
+                top: 18%;
+                background: white;
+                font-family: ourFont;
+                border-radius: 6px;
+                box-shadow: 2px 2px 7px;
+            }
+            #shop{
+                background: white;
+                width: 95%;
+                border-radius: 8px;
+                box-shadow: 2px 2px 15px;
+            }
+            p.question{
+                background: white;
+                margin:0;
+                margin-top: 15%;
+                padding: 2%;
+                font-size: 25px;
+                border-radius: 8px;
+                max-width: 80%;
+                left: 8%;
+                box-shadow: 2px 2px 15px #000000c4;
+                padding-top: 4%;
+                padding-bottom: 4%;
+                font-family: ourFont;
+                text-align: left;
+            }
+            #resultImg{
+                width: 95%;
+                background: white;
+                border-radius: 8px;
+                margin: 2.5%;
+                margin-top: 7.5%;
+                box-shadow: 2px 2px 15px #000000b0;
+            }
+            #get{
+                font-family: ourFont;
+                padding: 2%;
+                font-size: 19px;
+                background: rgb(25,150,24);
+                color: white;
+                border: 0;
+                margin: 5px;
+                border-radius: 6px;
+                box-shadow: 2px 2px 7px #00000078;
+            }
+            #cancel{
+                box-shadow: 2px 2px 5px #0000009c;
+                background: rgb(235,2,27);
+                font-family: ourFont;
+                font-size: 20px;
+                border: 0;
+                border-radius: 6px;
+                color: white;
+                padding: 2%;
+            }
+            button.choice{
+                padding: 4%;
+                width: 96%;
+                margin:8px;    
+                background: white;
+                border: 0;
+                font-family: ourFont;
+                font-size: 20px;
+                box-shadow: 2px 2px 7px #0000009c;
+                border-radius: 4px;
+                text-align: left;
+            }
+            
+            div.choicePlace{
+                margin-top: 15%;
+                width: 80%;
+                bottom: 10%;
+                left: 5%;
+            }
+            button.item{
+                padding: 0;
+                width:48%;
+                border: 0;
+                margin: 1px;
+                box-shadow: 2px 2px 7px;
+            }
+
+        </style>    
+
+    </Head>
+    
+    <body>
+        <script>
+            //resize the body before it loads content 
+                if(window.innerWidth > window.innerHeight){
+            document.querySelector("body").style.width = "40%";
+            document.querySelector("body").style.margin = "0%";
+            document.querySelector("body").style.marginLeft = "30%";
+        }
+        </script>
+        <div id="0" class="questionHolder">
+            <center>
+                <div style="background: white;width: 80%;padding: 2%;font-family: ourFont;font-size: 35px;border-radius: 6px;margin-top: 23%;box-shadow: 2px 2px 15px;">
+                    <p>Memes Culture Quiz <font size="5px">(9 Questions)</font></p>  <button style=" border: 0;background: RGB(11,169,11);font-size: 20px;font-family: ourFont;padding: 2%;width: 60%;border-radius: 4px;box-shadow: 2px 2px 5px gray;color: white;text-align: center;" class="choice">Begin</button>
+                </div>    
+            </center>
+        </div>
+        <div id="1" class="questionHolder" style="display: none">
+            <center>
+                <p class="question" >One of the top memes of 2019 shows a _____ screaming at a cat.</p>
+                
+                <div class="choicePlace">
+                    <button class="choice">A- Dog</button>
+                    <button class="choice" id="true">B- Woman</button>
+                    <button class="choice">C- Mouse</button>
+                    <button class="choice">D- Gamer</button>
+                </div>
+            </center>
+        </div>
+        
+         <div id="2" class="questionHolder" style="display: none">
+            <center>
+                <p class="question" >Someone who makes a lot of good memes is a ____.</p>
+                
+                <div class="choicePlace">
+                    <button class="choice">A- Memer</button>
+                    <button class="choice">B- Pewdiepie</button>
+                    <button class="choice" id="true">C- Memes-lord</button>
+                    <button class="choice">D- Nothing in Particular</button>
+                </div>
+            </center>
+        </div>
+        
+         <div id="3" class="questionHolder" style="display: none">
+            <center>
+                <p class="question" >Which of these games had the most memes in 2019?</p>
+                
+                <div class="choicePlace">
+                    <button class="choice">A- PUBG</button>
+                    <button class="choice">B- League of Legends</button>
+                    <button class="choice">C- FIFA20</button>
+                    <button class="choice" id="true">D- Minecraft</button>
+                </div>
+            </center>         
+        </div>   
+        
+        <div id="4" class="questionHolder" style="display: none">
+            <center>
+                <p class="question" >Which of the following memes debuted in 2019?</p>
+                
+                <div class="choicePlace">
+                    <button class="choice" id="true">A- Guy Running Like Naruto</button>
+                    <button class="choice">B- Ricardo Milos</button>
+                    <button class="choice">C- Distracted Boyfriend</button>
+                    <button class="choice">D- Ugandan Knuckles</button>
+                </div>
+            </center>         
+        </div> 
+        
+        <div id="5" class="questionHolder" style="display: none">
+            <center>
+                <p class="question" >Who of the following makes Meme Reviews?</p>
+                
+                <div class="choicePlace">
+                    <button class="choice">A- Logan Paul</button>
+                    <button class="choice" id="true">B- KSI</button>
+                    <button class="choice">C- Ninja</button>
+                    <button class="choice">D- David Dobrick</button>
+                </div>
+            </center>         
+        </div> 
+        
+        <div id="6" class="questionHolder" style="display: none">
+            <center>
+                <p class="question" >Which of the these platforms is widely used by meme-reviewers to recieve memes from fans?</p>
+                
+                <div class="choicePlace">
+                    <button class="choice" id="true">A- Reddit</button>
+                    <button class="choice">B- YouTube</button>
+                    <button class="choice">C- Discord</button>
+                    <button class="choice">D- Twitch</button>
+                </div>
+            </center>         
+        </div> 
+        
+        <div id="7" class="questionHolder" style="display: none">
+            <center>
+                <p class="question" >What does the word "Boomer" describe?</p>
+                
+                <div class="choicePlace">
+                    <button class="choice" id="true">A- Old People</button>
+                    <button class="choice">B- People Who Act Dumb</button>
+                    <button class="choice">C- Some Who Doesn't Understad Memes</button>
+                    <button class="choice">D- Best Memers</button>
+                </div>
+            </center>         
+        </div> 
+        
+        <div id="8" class="questionHolder" style="display: none">
+            <center>
+                <p class="question" >Someone who doesn't understand memes is called a ____.</p>
+                
+                <div class="choicePlace">
+                    <button class="choice">A- Boomer</button>
+                    <button class="choice">B- Normie</button>
+                    <button class="choice">C- Baby-Memer</button>
+                    <button class="choice" id="true">D- Nothing in Particular</button>
+                </div>
+            </center> 
+        </div> 
+        
+       <div id="9" class="questionHolder" style="display: none">
+            <center>
+                <p class="question" >Which of thses animals were most featured in memes?</p>
+                
+                <div class="choicePlace">
+                    <button class="choice">A- Mice</button>
+                    <button class="choice">B- Lions</button>
+                    <button class="choice">C- Turtles</button>
+                    <button class="choice" id="true">D- Cats</button>
+                </div>
+            </center> 
+        </div>
+        
+        <!-- to prevent double clicking-->
+        <div style="position: fixed; width: 100%; height: 100%; top:0; left: 0; background: rgba(0,0,0,0); display: none" id="doubleClickPrevent">
+        </div>
+        
+        <!-- result section-->
+        <div id="10" class="questionHolder" style="display: none">
+            <center>
+                <!-- rank images. only one is shown : based on score-->
+                <div id="resultImg">
+                    <img src="img/1.png" id="a" width="80%" style="padding: 6%">
+                    <img src="img/2.png" id="b" width="80%" style="padding: 6%">
+                    <img src="img/3.png" id="c" width="80%" style="padding: 6%">
+                    <p id="result" style="margin: 0; padding: 5px; font-family: ourFont;"></p>
+                </div>
+                
+                <!-- shop section-->
+                <div id="shop">
+                    <p style="padding: 3%; font-family: ourFont; font-size: 30px; margin-bottom: 0;">Shop</p>
+                    <p style="font-family: ourFont; font-size: 17px; margin-top: 0;">Click to buy through Amazon.com</p>
+                     
+                    <!-- Products-->
+                    <button class="item" id="item1"><img src="products/1.jpg" width="100%"></button> 
+                    <button class="item" id="item2"><img src="products/2.jpg" width="100%"></button>
+                    <button class="item" id="item3"><img src="products/3.jpg" width="100%"></button>
+                    <button class="item" id="item4"><img src="products/4.jpg" width="100%"></button>
+                </div>
+                
+                <!-- check -->
+                <div id="check">
+                    <img id="productImg" src="" width="80%">
+                    <a id="link" target="_blank" href=""><button id="get">Get it on Amazon</button></a><button id="cancel"> X </button>
+                    <p>Transparency: Amazon uses cookies</p>
+                </div>
+            </center>    
+        
+        </div>
+    </body>
+    <script src="jquery-3.3.1.js"></script>
+    <script>
+        var score = 0;
+        var i = 0;
+        var questionHolder = document.querySelectorAll("div.questionHolder");
+        var choicebuttons = document.querySelectorAll("button.choice");
+        var correctAns = document.querySelectorAll("#true");
+        
+        //adds 1 to score for every correct answer
+        for(var u = 0; u < correctAns.length; u++){            
+            correctAns[u].addEventListener("click", ()=>{score+=1;});       
+        };
+        
+        //this section creates transtions between question using jQuery, prevents double clicks, but mainly scores the answers
+        for(var t = 0; t < choicebuttons.length; t++){
+            choicebuttons[t].addEventListener("click", () => {  
+                
+                $(questionHolder[i]).fadeOut(600);
+                document.querySelector("#doubleClickPrevent").style.display="block";
+                //score calcutor function, activated on the last question
+                if( i == 9){
+                    if(score < 4){
+                        document.querySelector("#a").style.display = "block";
+                        document.querySelector("#b").style.display = "none";
+                        document.querySelector("#c").style.display = "none";
+                        
+                        document.querySelector("#result").textContent =  "You Got " + score + " out of 9.";
+                    }else if(score <8 ){
+                        document.querySelector("#a").style.display = "none";
+                        document.querySelector("#b").style.display = "block";
+                        document.querySelector("#c").style.display = "none";
+                        
+                        document.querySelector("#result").textContent =  "You Got " + score + " out of 9.";
+                    }   else if(score > 7){
+                        document.querySelector("#a").style.display = "none";
+                        document.querySelector("#b").style.display = "none";
+                        document.querySelector("#c").style.display = "block";
+                        
+                        document.querySelector("#result").textContent =  "You Got " + score + " out of 9.";
+                    }                    
+                }
+                
+                
+                $(questionHolder[i+1]).delay(600).fadeIn(600);
+                i+=1;    
+                $("#doubleClickPrevent").delay(600).fadeOut(600);
+            });
+        }
+        
+        //show the check section for product number 1
+        document.querySelector("#item1").addEventListener("click", ()=>{
+            document.querySelector("#productImg").src = "products/1.jpg";
+            $("#check").fadeIn();
+            document.querySelector("#link").href = "https://amzn.to/2Qmbwr3";
+        });
+        
+        //show the check section for product number 2
+        document.querySelector("#item2").addEventListener("click", ()=>{
+            document.querySelector("#productImg").src = "products/2.jpg";
+            $("#check").fadeIn();
+            document.querySelector("#link").href = "https://amzn.to/37taNd3";
+        });
+        
+        //show the check section for product number 3
+        document.querySelector("#item3").addEventListener("click", ()=>{
+            document.querySelector("#productImg").src = "products/3.jpg";
+            $("#check").fadeIn();
+            document.querySelector("#link").href = "https://amzn.to/2ZJlNk0";
+        });
+        
+        //show the check section for product number 4
+        document.querySelector("#item4").addEventListener("click", ()=>{
+            document.querySelector("#productImg").src = "products/4.jpg";
+            $("#check").fadeIn();
+            document.querySelector("#link").href = "https://amzn.to/2FdJPtZ";
+        });
+        
+        document.querySelector("#cancel").addEventListener("click", ()=>{
+            $("#check").fadeOut();
+        });
+        
+        //resize the check area in case based on the screen type
+        if(window.innerWidth > window.innerHeight){
+            document.querySelector("#check").style.width = "28%";
+            document.querySelector("#check").style.left = "35%";
+            document.querySelector("#check").style.top = "10%";
+        }
+    </script>
+
+
+</html>
